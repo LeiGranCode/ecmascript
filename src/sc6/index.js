@@ -59,3 +59,44 @@ console.log(globalvar);
 console.log(localvar);
 //const
 const a='b';
+//Propiedad de objetos mejorada ES5
+let nombre='Oscar'
+let age=32;
+obj ={nombre:nombre,age:age};
+//con ES6
+obj2={nombre,age};
+console.log(obj2);
+//Arrows Functions
+const nombres=[
+  {nombre: 'oscar', age: 32},
+  {nombre: 'Yesica',age: 27}
+]
+let listOfNombres=nombres.map(function(item){
+console.log(item.nombre);
+})
+//ES6
+let listOfNombres2=nombres.map(item=>console.log(item.nombre));
+//Otra forma
+const listOfNombres3=(nombre,ages,country)=>{
+  ...
+}
+//otra forma
+const listOfNombres4 = nombre=>{
+  ...
+}
+//otra forma- recibe num y retorna el producto de la multiplicación
+const square = num => num*num;
+
+//PROMESAS
+const PrimeraPromesa=()=>{
+  return new Promise((resolve,reject)=>{
+    if (true){
+      resolve("Resuelto");
+    }else{
+      reject("UPS!");
+    }
+  });
+}
+PrimeraPromesa()
+  .then(response =>console.log(response))
+  .catch(error =>console.log(error));
