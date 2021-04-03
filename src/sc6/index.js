@@ -78,11 +78,11 @@ console.log(item.nombre);
 let listOfNombres2=nombres.map(item=>console.log(item.nombre));
 //Otra forma
 const listOfNombres3=(nombre,ages,country)=>{
-  ...
+  //...
 }
 //otra forma
 const listOfNombres4 = nombre=>{
-  ...
+  //...
 }
 //otra forma- recibe num y retorna el producto de la multiplicación
 const square = num => num*num;
@@ -100,3 +100,34 @@ const PrimeraPromesa=()=>{
 PrimeraPromesa()
   .then(response =>console.log(response))
   .catch(error =>console.log(error));
+
+  //Clases, Modulos y Generadores
+  class calculadora{
+    constructor(){
+      this.valorA=0;
+      this.valorB=0;
+    }
+    suma(valorA,valorB){
+      this.valorA=valorA;
+      this.valorB=valorB;
+      return this.valorA+this.valorB;
+    }
+  }
+  const resul= new calculadora();
+  console.log(resul.suma(5,8));
+  //importar arrow function de otro modulo
+  import {hello} from './module.js';
+  hello();
+//Generadores
+function* helloWorld(){
+  if(true){
+    yield 'hello, '
+  }
+  if(true){
+    yield 'world'
+  }
+};
+const generadorHello=helloWorld();
+console.log(generadorHello.next().value);
+console.log(generadorHello.next().value);
+console.log(generadorHello.next().value);
