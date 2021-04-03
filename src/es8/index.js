@@ -1,3 +1,5 @@
+import hello from "../es6/module";
+
 //ES8 Object.entries transformar todos los elementos de Objetos a Arreglos
 const data={
   frontend: 'Oscar',
@@ -19,3 +21,25 @@ console.log(valores);
 const string ='hello';
 console.log(string.padStart(7,'hi'));
 console.log(string.padStart(12,'-----'));
+//ES8 Async Await y promesas
+const holamundo=() =>{
+  return new Promise((resolve, reject)=>{
+    (false)
+    ?setTimeout(()=> resolve('Hello World'),3000)
+    :reject(new error('test error'))
+  });
+}
+const testAsync= async()=>{
+  const hello=await holamundo();
+  console.log(hello);
+};
+testAsync();
+
+const otraFuncion= async()=>{
+  try{
+    const hello= await holamundo();
+    console.log(hello);
+  }catch (error){
+    console.log(error);
+  }
+}
