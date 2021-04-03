@@ -8,3 +8,16 @@ let cadena='        hola      ';
 console.log(cadena);
 console.log(cadena.trimStart());
 console.log(cadena.trimEnd());
+//try catch
+try {
+
+}catch(error){
+  error
+}
+//
+let entradas=[["name","oscar"],["age",32]];
+console.log(Object.fromEntries(entradas));
+//
+let mySymbl=`My symbol`;
+let symbol= Symbol(mySymbl);
+console.log(symbol.description);
