@@ -24,7 +24,7 @@ console.log(string.padStart(12,'-----'));
 //ES8 Async Await y promesas
 const holamundo=() =>{
   return new Promise((resolve, reject)=>{
-    (false)
+    (true)
     ?setTimeout(()=> resolve('Hello World'),3000)
     :reject(new error('test error'))
   });
